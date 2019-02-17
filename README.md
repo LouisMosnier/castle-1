@@ -1,199 +1,68 @@
-# Castle
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-> Sleep well with Relais & Châteaux
+## Available Scripts
 
-![castle](https://media.relaischateaux.com/public/hash/919a5432f068d38d0b14b87e52fc27ae66c84376)
+In the project directory, you can run:
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+### `npm start`
 
-- [🐣 Introduction](#-introduction)
-- [🎯 Objectives](#-objectives)
-- [🏃‍♀️ Steps to do](#%E2%80%8D-steps-to-do)
-  - [Stack](#stack)
-- [👩‍💻 Just tell me what to do](#%E2%80%8D-just-tell-me-what-to-do)
-- [🏃‍♀️ Example of Steps to do](#%E2%80%8D-example-of-steps-to-do)
-  - [Investigation](#investigation)
-    - [Hotels from Relais & Châteaux](#hotels-from-relais--ch%C3%A2teaux)
-    - [Michelin Restaurant](#michelin-restaurant)
-    - [The web application](#the-web-application)
-  - [Server-side with Node.js](#server-side-with-nodejs)
-    - [require('castle')](#requirecastle)
-    - [require('michelin')](#requiremichelin)
-  - [Client-side with React](#client-side-with-react)
-  - [Notification (bonus)](#notification-bonus)
-- [Don't forget](#dont-forget)
-- [Licence](#licence)
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-## 🐣 Introduction
+### `npm test`
 
-## 🎯 Objectives
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-**List the best rates - for each Weekend - for France located Relais & Châteaux with starred restaurants**
+### `npm run build`
 
-## 🏃‍♀️ Steps to do
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Create a connection between [relaischateaux.com](https://www.relaischateaux.com), [restaurant.michelin.fr](https://restaurant.michelin.fr/) and the end-user.
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-### Stack
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```
-Node.js + React + Material Design (mdl, bootstrap, foundation...) + ES6 [+ docker + redis ...]
-```
+### `npm run eject`
 
-## 👩‍💻 Just tell me what to do
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-1. Fork the project via `github`
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-![fork](./fork.png)
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-1. Clone your forked repository project `https://github.com/YOUR_USERNAME/castle`
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-```sh
-❯ cd /path/to/workspace
-❯ git clone git@github.com:YOUR_USERNAME/castle.git
-```
+## Learn More
 
-1. **Do things**
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-1. commit your different modifications:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```sh
-❯ cd /path/to/workspace/castle
-❯ git add -A && git commit -m "feat(michelin): get list of starred restaurants"
-```
+### Code Splitting
 
-([why following a commit message convention?](https://www.conventionalcommits.org)
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-1. Don't forget to commit early, commit often and push often
+### Analyzing the Bundle Size
 
-```sh
-❯ git push origin master
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-**Note**: if you catch an error about authentication, [add your ssh to your github profile](https://help.github.com/articles/connecting-to-github-with-ssh/).
+### Making a Progressive Web App
 
-1. If you need some helps on git commands, read [git - the simple guide](http://rogerdudler.github.io/git-guide/)
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-## 🏃‍♀️ Example of Steps to do
+### Advanced Configuration
 
-### Investigation
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-#### Properties from Relais & Châteaux
+### Deployment
 
-1. How it works https://www.relaischateaux.com ?
-1. How to get the list of `Hotel + restaurant`
-1. How to identify the restaurant(s) name ?
-1. How to compute the booking price for all weekend ? for a given weekend?
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-etc ...
+### `npm run build` fails to minify
 
-Some things to do:
-
-1. Browse the website
-1. Check how that you can get list of properties: api etc.... (check network activity)
-1. Check how that you can get list of restaurants for a given property: api etc.... (check network activity)
-1. define the JSON schema for Property
-
-etc ...
-
-Example of Property: https://www.relaischateaux.com/fr/france/mercues-lot-mercues
-
-#### Michelin Restaurant
-
-1. How it works https://restaurant.michelin.fr
-1. What are the given properties for a starred restaurant: name, adress, town, stars, chef... ?
-1. ...
-
-Some things to do:
-
-1. Browse the website
-1. define the JSON schema for a restaurant
-1. Check how that you can get list of starred restaurants: api etc.... (check network activity)
-
-etc...
-
-Example of Restaurant: https://restaurant.michelin.fr/2akhln2/lauberge-des-glazicks-plomodiern
-
-
-#### The web application
-
-Some things to do:
-
-1. How to create a connection between Relais & Châteaux and the starred restaurant?
-
-### Server-side with Node.js
-
-#### require('castle')
-
-Create a module called `castle` that returns the list of best rates for all Weekends for each Property
-
-```js
-const castle = require('castle');
-...
-const property = {...};
-
-
-const properties = castle.getProperties();
-const prices = castle.getPrices(property);
-
-...
-```
-
-Some things to do:
-
-1. create the calls (api, http) to get the Property page
-1. get the restaurants name (by scraping or decoding api response)
-1. check if the restaurant is starred.
-1. get the price by Weekend (by scraping or decoding api response)
-
-#### require('michelin')
-
-Create a module called `michelin` that return the list of restaurant
-
-```js
-const michelin = require('michelin');
-
-const starred = michelin.get();
-
-...
-```
-
-Some things to do:
-
-1. scrape list of France located starred restaurants
-1. store the list into JSON file, nosql database (like redis, mongodb...)
-1. create a node module that returns the list
-
-### Client-side with React
-
-MVP to do:
-
-1. **For each Weekend, list best rates for France located Relais & Châteaux with starred restaurants**
-
-Next features:
-
-2. Add filters:
-  * filtering by name
-  * sorting by stars
-  * sorting by price
-  * sorting by distance
-
-3. Bonus: Display on a map only Relais & Châteaux with starred restaurants.
-
-### Notification (bonus)
-
-Some things to do:
-
-1. Notify me (discord or slack) a new best rate price for any Relais & Châteaux with starred restaurant.
-
-## Don't forget
-
-**Focus on codebase and UX/UI**
-
-## Licence
-
-[Uncopyrighted](http://zenhabits.net/uncopyright/)
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
